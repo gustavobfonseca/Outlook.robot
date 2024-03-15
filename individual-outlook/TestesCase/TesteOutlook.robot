@@ -26,7 +26,12 @@ Mandar novo email
     Mandar email completo com cópia oculta
 
 Pesquisar email
-    Pesquisar email
+    # Pesquisar email em todas as pastas
+    # Pesquisar email em itens enviados
+    # Pesquisar email na caixa de entrada
+    # Pesquisar email no lixo eletrônico
+    # Pesquisar email nos rascunhos
+    Pesquisar email nos ítens excluidos
 
 Responder email
     Dado que eu realize o login

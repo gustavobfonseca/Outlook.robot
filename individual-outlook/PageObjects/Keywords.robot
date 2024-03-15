@@ -120,7 +120,7 @@ E preencho quem será colocado em cópia oculta
     Input Text    ${INPUT_COM_COPIA_OCULTA}    gustav8Testes@outlook.com
 
 
-*** Keywords ***    #REALIZAR PESQUISA
+*** Keywords ***    #REALIZAR PESQUISA  EM TODAS AS PASTAS
 Quando eu clicar na barra de pesquisa
     Click Element    ${PESQUISA}
 
@@ -133,6 +133,31 @@ E pressionar "Enter" ou clicar no botão de pesquisa
 Então o sistema deverá exibir os resultados relevantes que correspondam à palavra-chave
     Wait Until Element Is Visible    ${PRINCIPAIS RESULTADOS}
     Element Should Be Visible    ${PRINCIPAIS RESULTADOS}
+
+*** Keywords ***    #REALIZAR PESQUISA NA CAIXA DE ENTRADA
+E seleciono "Na caixa de entrada"
+    Click Element    ${ABRIR_OPCOES_PESQUISA}
+    Click Element    ${OPCAO_CAIXA_DE_ENTRADA}
+
+*** Keywords ***
+E seleciono "Rascunhos"
+    Click Element    ${ABRIR_OPCOES_PESQUISA}
+    Click Element    ${OPCAO_RASCUNHOS}
+
+*** Keywords ***
+E seleciono "Itens Enviados"
+    Click Element    ${ABRIR_OPCOES_PESQUISA}
+    Click Element    ${OPCAO_ITENS_ENVIADOS}
+
+*** Keywords ***
+E seleciono "Itens Excluidos"
+    Click Element    ${ABRIR_OPCOES_PESQUISA}
+    Click Element    ${OPCAO_ITENS_EXCLUIDOS}
+
+*** Keywords ***
+E seleciono "Lixo Eletrônico"
+    Click Element    ${ABRIR_OPCOES_PESQUISA}
+    Click Element    ${OPCAO_LIXO_ELETRONICO}
 
 
 *** Keywords ***    #RESPONDER EMAIL
@@ -174,7 +199,6 @@ Entao deve aparecer uma notificação que o email foi apagado
 
 E desfazer apagado
     Click Element    ${DESFAZER APAGADO}
-
 
 
 

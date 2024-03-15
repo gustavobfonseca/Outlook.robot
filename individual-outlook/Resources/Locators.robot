@@ -42,8 +42,29 @@ ${INPUT_COM_COPIA_OCULTA}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div
 
 
 
+
+
+
+
+
+
 ${PESQUISA}    id=topSearchInput
 ${PRINCIPAIS RESULTADOS}    //*[@id="MailList"]
+
+${ABRIR_OPCOES_PESQUISA}    //*[@id="searchScopeButtonId"]/span[2]
+${OPCAO_CAIXA_DE_ENTRADA}   //*[@id="searchScopeButtonId-list1"]/span
+
+${OPCAO_RASCUNHOS}   //*[@id="searchScopeButtonId-list2"]/span
+
+${OPCAO_ITENS_ENVIADOS}   //*[@id="searchScopeButtonId-list3"]/span
+
+${OPCAO_ITENS_EXCLUIDOS}   //*[@id="searchScopeButtonId-list4"]/span
+
+${OPCAO_LIXO_ELETRONICO}   //*[@id="searchScopeButtonId-list4"]/span
+
+
+
+
 
 ${DIV EMAIL}    id=AQAAAAAAAQABAAAAAZcBfAAAAAA=
 ${BOTAO RESPONDER EMAIL}    //*[@id="ConversationReadingPaneContainer"]/div[2]/div/div/div[1]/div/div/div/div/div[6]/button[1]
