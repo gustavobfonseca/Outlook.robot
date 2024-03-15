@@ -18,14 +18,27 @@ ${MENSAGEM_ERRO_SENHA}    id=i0118Error
 ${MENSAGEM_EMAIL_INEXISTENTE}    id=i0116Error
 
 
+
+
 ${INPUT PARA}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[1]/div/div[3]/div/div/div[1]
 ${INPUT CC}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[1]/div/div[6]/div/div/div[1]
-${INPUT ASSUNTO}    //*[@id="docking_InitVisiblePart_1"]/div/div[3]/div[2]/div[2]
+${DIV ASSUNTO}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[2]/div[2]
+${INPUT ASSUNTO}    //input[@placeholder="Adicionar um assunto"] 
 ${INPUT CORPO}    id=editorParent_1
 ${PREENCHER CORPO}    //*[@id="contentDiv_0"]
 ${BOTAO ENVIAR EMAIL}    //*[@id="docking_InitVisiblePart_0"]/div/div[2]/div[1]/div/span/button[1] 
 ${CONFIRMAR ENVIO}    id=ok-1
 ${IMAGEM EMAIL ENVIADO}    //*[@id="ReadingPaneContainerId"]/div/div/div/div/div/div[1]
+
+${ERRO_DESTINATARIO}    id=REK000000
+${ERRO_SEM_DESTINATARIO}    //*[@id="docking_InitVisiblePart_0"]/div/div[1]
+
+${BOTAO_COPIA}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[1]/div/div[1]/button[1]
+${INPUT_COM_COPIA}   //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[1]/div/div[6]/div/div/div[1]
+
+${BOTAO_COPIA_OCULTA}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[1]/div/div[1]/button[2]
+${INPUT_COM_COPIA_OCULTA}    //*[@id="docking_InitVisiblePart_0"]/div/div[3]/div[1]/div/div[6]/div/div/div[1]
+
 
 
 

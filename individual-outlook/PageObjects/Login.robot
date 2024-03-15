@@ -3,7 +3,6 @@ Resource    ../PageObjects/SetupTeardown.robot
 Resource    ../Resources/Locators.robot
 Resource    ../PageObjects/Keywords.robot
 Resource    ../TestesCase/TesteOutlook.robot
-Resource    Keywords-Login.robot
 
 Test Teardown        Fechar Navegador
 
@@ -65,3 +64,13 @@ Login alternativo com senha incorreta
     E preencher senha incorreta
     E clico no botão avançar
     Então deve aparecer a mensagem de "senha incorreta"
+
+Login alternativo com email inexistente
+  Dado que eu acesse o site da outlook
+    Quando eu rolar a tela para baixo
+    E clicar em iniciar sessão
+    E mudar para nova aba
+   E preencher email inexistente
+    E clico no botão avançar
+    Então deve aparecer a mensagem de "inexistente"
+

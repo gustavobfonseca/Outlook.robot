@@ -2,8 +2,122 @@
 Resource    ../Resources/Locators.robot
 Resource    ../TestesCase/TesteOutlook.robot
 
+*** Keywords ***    #REALIZAR LOGIN
+Quando eu clico no botão iniciar sessão
+     Click Element    ${BOTAO INICIAR SESSAO}
+
+E mudar para nova aba
+    Switch Window    NEW
+
+E preencher email
+    Wait Until Page Contains Element    ${INPUT_LOGIN}
+    Input Text    ${INPUT_LOGIN}    gustav8Testes@outlook.com
+E clico no botão avançar
+    Wait Until Page Contains Element    ${BOTAO AVANCAR}
+    Click Element    ${BOTAO AVANCAR}
+
+E preencher senha
+    Wait Until Page Contains Element    ${INPUT_SENHA}
+    Input Password    ${INPUT_SENHA}    Teste123@
+
+E clico no botão de confirmar login
+    Wait Until Page Contains Element    ${BOTAO CONFIRMAR LOGIN}
+    Click Element    ${BOTAO CONFIRMAR LOGIN}
+Então deve aparecer o botão "novo email" como evidencia de que o login foi feito    Wait Until Page Contains Element    ${BOTAO_NOVO_EMAIL}
+    Element Should Be Visible    ${BOTAO_NOVO_EMAIL}
+
+Dado que eu realize o login
+    Login
+*** Keywords ***    #LOGIN SENHA ERRADA
+E preencher senha incorreta
+    Wait Until Page Contains Element    ${INPUT_SENHA}
+    Input Password    ${INPUT_SENHA}    SenhaErrada
+
+Então deve aparecer a mensagem de "senha incorreta"
+    Wait Until Element Is Visible    ${MENSAGEM_ERRO_SENHA}
+
+*** Keywords ***    #LOGIN EMAIL INEXISTENTE
+E preencher email inexistente
+    Wait Until Page Contains Element    ${INPUT_LOGIN}
+    Input Text    ${INPUT_LOGIN}    loginErrado@outlook.com
+
+Então deve aparecer a mensagem de "inexistente"
+    Wait Until Element Is Visible    ${MENSAGEM_EMAIL_INEXISTENTE}
+    Element Should Be Visible    ${MENSAGEM_EMAIL_INEXISTENTE}
+*** Keywords ***    #LOGIN ALTERNATIVO
+Quando eu rolar a tela para baixo
+    Scroll Element Into View    ${DIV_ROLAMENTO_PAGINA}
+    Scroll Element Into View    ${IMAGEM_TELA_INICIAL}
+
+E clicar em iniciar sessão
+    Element Should Be Visible    ${INICIAR_SESSAO}
+    Click Element    ${INICIAR_SESSAO}
 
 
+*** Keywords ***    #ENVIAR NOVO EMAIL
+Quando eu clico em novo email
+     Wait Until Page Contains Element    ${BOTAO_NOVO_EMAIL}
+     Click Button    ${BOTAO_NOVO_EMAIL}
+
+E preencho para quem
+    Wait Until Page Contains Element    ${INPUT PARA}
+    Click Element    ${INPUT PARA}
+    Input Text    ${INPUT PARA}    gustav8Testes@outlook.com
+    Press Keys    none    ENTER
+
+E preencho o asssunto
+    Wait Until Page Contains Element    ${DIV ASSUNTO}
+    Double Click Element    ${DIV ASSUNTO}
+    Wait Until Page Contains Element    ${Input ASSUNTO}
+    Input Text    ${INPUT ASSUNTO}    QA
+
+E preencher o corpo
+    Click Element    ${INPUT CORPO}
+    Input Text    ${PREENCHER CORPO}    Olá, isso é um teste
+
+E clicar em enviar o email
+    Click Element    ${BOTAO ENVIAR EMAIL}
+
+E confirmar o envio
+    Wait Until Page Contains Element    ${CONFIRMAR ENVIO}
+    Sleep    1s
+    Scroll Element Into View    ${CONFIRMAR ENVIO}
+    Click Element    ${CONFIRMAR ENVIO}
+
+Então deve aparecer uma imagem como evidência que o email foi enviado
+    Wait Until Page Contains Element    ${IMAGEM EMAIL ENVIADO}
+    Element Should Be Visible    ${IMAGEM EMAIL ENVIADO}
+
+*** Keywords ***    #ENVIAR EMAIL COM DESTINATÁRIO INVÁLIDO
+E preencho para quem invalido
+    Wait Until Page Contains Element    ${INPUT PARA}
+    Click Element    ${INPUT PARA}
+    Input Text    ${INPUT PARA}    EmailInválido
+    Press Keys    none    ENTER
+
+Então deve indicar um erro em volta do destinatário digitado
+    Wait Until Element Is Visible    ${ERRO_DESTINATARIO}
+    Scroll Element Into View    ${ERRO_DESTINATARIO}
+
+*** Keywords ***    #ENVIAR EMAIL SEM DESTINATÁRIO
+Então deve indicar que é necessário um destinatário
+    Wait Until Element Is Visible    ${ERRO_SEM_DESTINATARIO}
+    
+*** Keywords ***    #MANDAR EMAIL COMPLETO COM CÓPIA
+E clico no botão de adicionar cópia
+    Click Element    ${BOTAO_COPIA}
+E preencho quem será colocado em cópia
+    Wait Until Element Is Visible    ${INPUT_COM_COPIA}
+    Input Text    ${INPUT_COM_COPIA}    gustav8Testes@outlook.com
+
+
+*** Keywords ***    #ENVIAR EMAIL COMPLETO COM CÓPIA OCULTA
+E clico no botão de adicionar cópia oculta
+    Click Element    ${BOTAO_COPIA_OCULTA}
+E preencho quem será colocado em cópia oculta
+    # Wait Until Element Is Visible    ${INPUT_COM_COPIA_OCULTA}
+    Click Element    ${INPUT_COM_COPIA_OCULTA}
+    Input Text    ${INPUT_COM_COPIA_OCULTA}    gustav8Testes@outlook.com
 
 
 *** Keywords ***    #REALIZAR PESQUISA
@@ -42,17 +156,6 @@ E clicar no botão "Enviar"
 Então deve sumir o botão de enviar resposta como evidencia que a resposta foi enviada
     Element Should Not Be Visible   ${CORPO RESPOSTA}
 
-*** Keywords ***    #CRIAR NOVA PASTA
-Quando clicar em "criar nova pasta"
-    Scroll Element Into View    ${CRIAR PASTA}
-    Click Element    ${CRIAR PASTA}
-E preencher com o nome da nova pasta
-    # Execute Javascript    return    CalendarioAtual()
-    # Wait Until Element Is Visible    ${INPUT PASTA}    
-    Input Text     ${INPUT PASTA}    OLA
-
-E pressionar a tecla "Enter"
-    Press Keys    none    ENTER
 
 *** Keywords ***    #APAGAR EMAILS
 

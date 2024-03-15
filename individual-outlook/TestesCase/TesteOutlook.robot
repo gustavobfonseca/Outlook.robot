@@ -3,28 +3,30 @@ Resource    ../PageObjects/SetupTeardown.robot
 Resource    ../Resources/Locators.robot
 Resource   ../PageObjects/Keywords.robot
 Resource    ../PageObjects/Login.robot
+Resource    ../PageObjects/MandarEmail.robot
+Resource    ../PageObjects/Pesquisar.robot
 
 Test Teardown        Fechar Navegador
 
 *** Test Cases ***
 Realizar Login
-    Login 
+    # Login 
+    # Login senha incorreta
+    # Login email inexistente
+    # Login alternativo
+    # Login alternativo com senha incorreta
+    Login alternativo com email inexistente
 
 Mandar novo email
-    Dado que eu realize o login
-    Quando eu clico em novo email
-    E preencho para quem
-    E preencher o corpo
-    E enviar o email
-    E confirmar o envio     #
-    Então deve aparecer uma imagem como evidência que o email foi enviado
+    # Mandar email completo
+    # Mandar email sem assunto
+    # Mandar email sem destinatario
+    # Mandar email com destinatario invalido
+    # Mandar email completo com cópia
+    Mandar email completo com cópia oculta
 
 Pesquisar email
-    Dado que eu realize o login
-    Quando eu clicar na barra de pesquisa
-    E preencho com o que quero pesquisar
-    E pressionar "Enter" ou clicar no botão de pesquisa
-    Então o sistema deverá exibir os resultados relevantes que correspondam à palavra-chave
+    Pesquisar email
 
 Responder email
     Dado que eu realize o login
@@ -33,12 +35,6 @@ Responder email
     E redigir a resposta no campo de texto
     E clicar no botão "Enviar"
     Então deve sumir o botão de enviar resposta como evidencia que a resposta foi enviada
-   
-# Criar pastas
-#     Dado que eu realize o login
-#     Quando clicar em "criar nova pasta"
-#     E preencher com o nome da nova pasta
-#     E pressionar a tecla "Enter"    
 
 Excluir email
     Dado que eu realize o login
