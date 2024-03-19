@@ -1,0 +1,9 @@
+robot -d results -i Logins TestesCase/Login.robot
+
+robot -d results -i Enviar-email TestesCase/MandarEmail.robot
+
+robot -d results -i Pesquisar TestesCase/Pesquisar.robot
+
+robot -d results -i Responder TestesCase/ResponderEmail.robot	
+
+robot -d results -i Excluir TestesCase/ExcluirEmail.robot

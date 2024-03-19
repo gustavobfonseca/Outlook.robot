@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-19T13:22:33.706198" rpa="false" schemaversion="5">
+<suite id="s1" name="ExcluirEmail" source="C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot">
+<test id="s1-t1" name="Apagar email da caixa de entrada" line="10">
+<kw name="Dado que eu realize o login" owner="Keywords">
+<kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:33.981351" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:22:33.980352" elapsed="5.530606"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:22:39.511458" elapsed="0.121866"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:33.980352" elapsed="5.652972"/>
+</kw>
+<kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:39.634337" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<arg>${BOTAO INICIAR SESSAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:39.634337" elapsed="0.153450"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:39.633324" elapsed="0.154962"/>
+</kw>
+<kw name="E mudar para nova aba" owner="Keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:39.788286" elapsed="0.015156"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:39.788286" elapsed="0.015354"/>
+</kw>
+<kw name="E preencher email" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:39.803640" elapsed="0.970664"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:40.775571" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>gustav8Testes@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:40.775070" elapsed="0.225159"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:39.803640" elapsed="1.196589"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:41.000229" elapsed="0.008988"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:41.009217" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:41.009217" elapsed="0.049238"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:41.000229" elapsed="0.058729"/>
+</kw>
+<kw name="E preencher senha" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:41.058958" elapsed="0.512006"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:41.571976" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:22:41.661717" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>Teste123@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:41.570964" elapsed="0.242440"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:41.058958" elapsed="0.754446"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:22:42.813634" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:22:41.813404" elapsed="1.000230"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:42.814668" elapsed="0.024575"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:42.840258" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:42.840258" elapsed="0.479405"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:42.814668" elapsed="0.505417"/>
+</kw>
+<kw name="E clico no botão de confirmar login" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:43.321165" elapsed="0.453276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:43.775482" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:43.775482" elapsed="1.158315"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:43.320085" elapsed="1.613712"/>
+</kw>
+<kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:44.934818" elapsed="1.853504"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:46.910967" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:22:46.788322" elapsed="0.123688"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:44.933797" elapsed="1.978213"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:33.980352" elapsed="12.931658"/>
+</kw>
+<kw name="Quando selecionar um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:46.913011" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:22:46.913011" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:22:46.913011" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:22:46.912010" elapsed="0.026892"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:46.912010" elapsed="0.026892"/>
+</kw>
+<kw name="E clicar no icone de excluir" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:46.941346" level="INFO">Clicking element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[2]/div/div/span/button[1]'.</msg>
+<arg>${BOTAO APAGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:46.941346" elapsed="0.529782"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:46.941346" elapsed="0.529782"/>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NOTIFICACAO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:22:47.472128" elapsed="1.255465"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:49.155114" level="INFO">Element '//*[@id="Pular para lista de mensagens-region"]/div[3]/div/div' is displayed.</msg>
+<arg>${NOTIFICACAO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:22:48.727593" elapsed="0.427521"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:47.472128" elapsed="1.682986"/>
+</kw>
+<kw name="E desfazer apagado" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:49.156115" level="INFO">Clicking element '//*[@id="Pular para lista de mensagens-region"]/div[3]/div/div/div[2]/button[1]'.</msg>
+<arg>${DESFAZER APAGADO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:49.156115" elapsed="0.196640"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:49.155114" elapsed="0.197641"/>
+</kw>
+<kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:22:49.353753" elapsed="2.228270"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:49.353753" elapsed="2.228270"/>
+</kw>
+<tag>Excluir</tag>
+<status status="PASS" start="2024-03-19T13:22:33.978357" elapsed="17.605601"/>
+</test>
+<test id="s1-t2" name="Apagar email com tecla delete" line="19">
+<kw name="Dado que eu realize o login" owner="Keywords">
+<kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:51.591956" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:22:51.590921" elapsed="5.136065"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:22:56.727988" elapsed="0.124301"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:51.590921" elapsed="5.261368"/>
+</kw>
+<kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:56.853311" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<arg>${BOTAO INICIAR SESSAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:56.853311" elapsed="0.133642"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:56.852289" elapsed="0.135262"/>
+</kw>
+<kw name="E mudar para nova aba" owner="Keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:56.988050" elapsed="0.015880"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:56.987551" elapsed="0.016379"/>
+</kw>
+<kw name="E preencher email" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:57.004749" elapsed="0.947010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:57.952850" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>gustav8Testes@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:57.951759" elapsed="0.219810"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:57.004430" elapsed="1.167139"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:58.172585" elapsed="0.014496"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:58.188082" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:58.187081" elapsed="0.088537"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:58.171569" elapsed="0.104049"/>
+</kw>
+<kw name="E preencher senha" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:58.276609" elapsed="0.500503"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:22:58.778115" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:22:58.852340" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>Teste123@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:22:58.777112" elapsed="0.203889"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:58.275618" elapsed="0.705383"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:22:59.982635" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:22:58.981001" elapsed="1.001634"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:22:59.983744" elapsed="0.023690"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:00.008427" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:00.007434" elapsed="0.466427"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:59.982635" elapsed="0.491226"/>
+</kw>
+<kw name="E clico no botão de confirmar login" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:00.476894" elapsed="0.454739"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:00.931633" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:00.931633" elapsed="1.144972"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:00.474872" elapsed="1.601733"/>
+</kw>
+<kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:02.077621" elapsed="1.751919"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:04.035818" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:03.830041" elapsed="0.205777"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:02.076605" elapsed="1.959213"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:22:51.589938" elapsed="12.445880"/>
+</kw>
+<kw name="Quando selecionar um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:04.036793" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:23:04.036793" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:23:04.036793" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:04.036793" elapsed="0.026757"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:04.035818" elapsed="0.027732"/>
+</kw>
+<kw name="E pressiono a tecla &quot;Delete&quot;" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:04.065574" level="INFO">Sending key(s) ('DELETE',) to page.</msg>
+<msg time="2024-03-19T13:23:04.065574" level="INFO">Pressing special key DELETE to browser.</msg>
+<msg time="2024-03-19T13:23:04.065574" level="INFO">Releasing special key DELETE.</msg>
+<arg>none</arg>
+<arg>DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:04.064551" elapsed="0.212119"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:04.064551" elapsed="0.212119"/>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NOTIFICACAO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:04.277702" elapsed="0.748123"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:05.399275" level="INFO">Element '//*[@id="Pular para lista de mensagens-region"]/div[3]/div/div' is displayed.</msg>
+<arg>${NOTIFICACAO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:05.026854" elapsed="0.372421"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:04.277702" elapsed="1.122605"/>
+</kw>
+<kw name="E desfazer apagado" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:05.400307" level="INFO">Clicking element '//*[@id="Pular para lista de mensagens-region"]/div[3]/div/div/div[2]/button[1]'.</msg>
+<arg>${DESFAZER APAGADO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:05.400307" elapsed="0.109481"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:05.400307" elapsed="0.110482"/>
+</kw>
+<kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:05.511785" elapsed="2.207676"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:05.510789" elapsed="2.209701"/>
+</kw>
+<tag>Excluir</tag>
+<status status="PASS" start="2024-03-19T13:22:51.588925" elapsed="16.133398"/>
+</test>
+<test id="s1-t3" name="Apagar email por mais ações" line="28">
+<kw name="Dado que eu realize o login" owner="Keywords">
+<kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:07.731448" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:23:07.730450" elapsed="5.737524"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:23:13.468552" elapsed="0.143362"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:07.730450" elapsed="5.881464"/>
+</kw>
+<kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:13.611914" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<arg>${BOTAO INICIAR SESSAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:13.611914" elapsed="0.220248"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:13.611914" elapsed="0.220747"/>
+</kw>
+<kw name="E mudar para nova aba" owner="Keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:13.832661" elapsed="0.029630"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:13.832661" elapsed="0.029630"/>
+</kw>
+<kw name="E preencher email" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:13.862790" elapsed="0.887321"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:14.752118" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>gustav8Testes@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:14.751125" elapsed="0.292277"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:13.862291" elapsed="1.181111"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:15.044374" elapsed="0.019001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:15.063375" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:15.063375" elapsed="0.101392"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:15.043402" elapsed="0.121365"/>
+</kw>
+<kw name="E preencher senha" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:15.165679" elapsed="0.491420"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:15.658104" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:23:15.715760" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>Teste123@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:15.657099" elapsed="0.184615"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:15.164767" elapsed="0.677452"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:23:16.842498" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:23:15.842219" elapsed="1.000279"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:16.843498" elapsed="0.017977"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:16.862498" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:16.861475" elapsed="0.444024"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:16.843498" elapsed="0.463016"/>
+</kw>
+<kw name="E clico no botão de confirmar login" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:17.307490" elapsed="0.463237"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:17.771681" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:17.770727" elapsed="1.164953"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:17.306514" elapsed="1.629166"/>
+</kw>
+<kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:18.937379" elapsed="1.699814"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:21.045320" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:20.637193" elapsed="0.408127"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:18.935680" elapsed="2.109640"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:07.729558" elapsed="13.315762"/>
+</kw>
+<kw name="Quando selecionar um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:21.047340" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:23:21.047340" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:23:21.047340" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:21.046319" elapsed="0.028401"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:21.046319" elapsed="0.028401"/>
+</kw>
+<kw name="E clico em &quot;Mais ações&quot;" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:26.312568" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-19T13:23:26.312568" level="FAIL">Element '//*[@id="ConversationReadingPaneContainer"]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div[2]/div/div/div[3]/div/button' not visible after 5 seconds.</msg>
+<arg>${MAIS_ACOES}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-03-19T13:23:21.075719" elapsed="5.238632">Element '//*[@id="ConversationReadingPaneContainer"]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div[2]/div/div/div[3]/div/button' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${MAIS_ACOES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-19T13:23:26.314351" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-19T13:23:21.075719" elapsed="5.238632">Element '//*[@id="ConversationReadingPaneContainer"]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div[2]/div/div/div[3]/div/button' not visible after 5 seconds.</status>
+</kw>
+<kw name="E clico em &quot;Excluir&quot;" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:23:26.315353" elapsed="0.000000"/>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:23:26.315353" elapsed="0.000000"/>
+</kw>
+<kw name="E desfazer apagado" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:23:26.316353" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:26.316353" elapsed="2.293464"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:26.316353" elapsed="2.293464"/>
+</kw>
+<tag>Excluir</tag>
+<status status="FAIL" start="2024-03-19T13:23:07.727459" elapsed="20.884442">Element '//*[@id="ConversationReadingPaneContainer"]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div[2]/div/div/div[3]/div/button' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t4" name="Apagar email dos rascunhos" line="38">
+<kw name="Dado que eu realize o login" owner="Keywords">
+<kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:28.620894" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:23:28.620894" elapsed="4.530220"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:23:33.151614" elapsed="0.156812"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:28.620894" elapsed="4.687532"/>
+</kw>
+<kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:33.309419" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<arg>${BOTAO INICIAR SESSAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:33.308426" elapsed="0.150969"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:33.308426" elapsed="0.151466"/>
+</kw>
+<kw name="E mudar para nova aba" owner="Keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:33.460394" elapsed="0.017722"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:33.459892" elapsed="0.018764"/>
+</kw>
+<kw name="E preencher email" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:33.478927" elapsed="0.920789"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:34.400692" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>gustav8Testes@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:34.399716" elapsed="0.214802"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:33.478927" elapsed="1.135591"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:34.614518" elapsed="0.013033"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:34.627551" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:34.627551" elapsed="0.083589"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:34.614518" elapsed="0.096622"/>
+</kw>
+<kw name="E preencher senha" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:34.712225" elapsed="0.529113"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:35.241338" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:23:35.309206" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>Teste123@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:35.241338" elapsed="0.230757"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:34.711140" elapsed="0.760955"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:23:36.473588" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:23:35.472095" elapsed="1.001493"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:36.474464" elapsed="0.024503"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:36.499964" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:36.498967" elapsed="0.458653"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:36.473588" elapsed="0.484032"/>
+</kw>
+<kw name="E clico no botão de confirmar login" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:36.958621" elapsed="0.451971"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:37.410592" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:37.410592" elapsed="1.017971"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:36.958621" elapsed="1.469942"/>
+</kw>
+<kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:38.429553" elapsed="1.874153"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:40.522095" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:40.304094" elapsed="0.218001"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:38.428563" elapsed="2.093532"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:28.619899" elapsed="11.902196"/>
+</kw>
+<kw name="Quando eu clico nos rascunhos" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RASCUNHO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:40.523094" elapsed="0.047527"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:40.570621" level="INFO">Clicking element '//*[@id="folderPaneDroppableContainer"]/div/div[3]/div/div/div[3]/div'.</msg>
+<arg>${RASCUNHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:40.570621" elapsed="0.156564"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:40.522095" elapsed="0.205090"/>
+</kw>
+<kw name="E seleciono um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:40.729219" level="INFO">Sending key(s) ('DOWN',) to page.</msg>
+<msg time="2024-03-19T13:23:40.729219" level="INFO">Pressing special key DOWN to browser.</msg>
+<msg time="2024-03-19T13:23:40.729219" level="INFO">Releasing special key DOWN.</msg>
+<arg>none</arg>
+<arg>DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:40.728184" elapsed="0.225568"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:40.955119" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:23:40.955119" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:23:40.955119" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:40.954751" elapsed="0.167034"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:40.728184" elapsed="0.393601"/>
+</kw>
+<kw name="E clicar no icone de excluir" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:41.122783" level="INFO">Clicking element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[2]/div/div/span/button[1]'.</msg>
+<msg time="2024-03-19T13:23:42.673044" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-19T13:23:42.673044" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF7924E9261]
+	(No symbol) [0x00007FF7924EB6EB]
+	(No symbol) [0x00007FF7924EB7B0]
+	(No symbol) [0x00007FF792530896]
+	(No symbol) [0x00007FF79252E387]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</msg>
+<arg>${BOTAO APAGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-19T13:23:41.122783" elapsed="1.552871">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF7924E9261]
+	(No symbol) [0x00007FF7924EB6EB]
+	(No symbol) [0x00007FF7924EB7B0]
+	(No symbol) [0x00007FF792530896]
+	(No symbol) [0x00007FF79252E387]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-03-19T13:23:41.122783" elapsed="1.553875">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF7924E9261]
+	(No symbol) [0x00007FF7924EB6EB]
+	(No symbol) [0x00007FF7924EB7B0]
+	(No symbol) [0x00007FF792530896]
+	(No symbol) [0x00007FF79252E387]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:23:42.677655" elapsed="0.000000"/>
+</kw>
+<kw name="E desfazer apagado" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:23:42.678652" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:42.679335" elapsed="2.279978"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:42.679335" elapsed="2.279978"/>
+</kw>
+<tag>Excluir</tag>
+<status status="FAIL" start="2024-03-19T13:23:28.617889" elapsed="16.343355">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF7924E9261]
+	(No symbol) [0x00007FF7924EB6EB]
+	(No symbol) [0x00007FF7924EB7B0]
+	(No symbol) [0x00007FF792530896]
+	(No symbol) [0x00007FF79252E387]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</test>
+<test id="s1-t5" name="Apagar email do Lixo Eletrônico" line="48">
+<kw name="Dado que eu realize o login" owner="Keywords">
+<kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:44.978363" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:23:44.978363" elapsed="5.924905"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:23:50.903268" elapsed="0.153176"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:44.977262" elapsed="6.079182"/>
+</kw>
+<kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:51.057498" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<arg>${BOTAO INICIAR SESSAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:51.057498" elapsed="0.149678"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:51.056444" elapsed="0.150732"/>
+</kw>
+<kw name="E mudar para nova aba" owner="Keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:51.207678" elapsed="0.016317"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:51.207678" elapsed="0.016317"/>
+</kw>
+<kw name="E preencher email" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:51.224803" elapsed="0.991537"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:52.218002" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>gustav8Testes@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:52.216340" elapsed="0.235442"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:51.224604" elapsed="1.227178"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:52.451782" elapsed="0.012384"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:52.465243" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:52.464166" elapsed="0.090417"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:52.451782" elapsed="0.102801"/>
+</kw>
+<kw name="E preencher senha" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:52.555581" elapsed="0.518333"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:53.074908" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:23:53.153919" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>Teste123@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:53.074908" elapsed="0.246777"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:52.555581" elapsed="0.766104"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:23:54.322621" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:23:53.322247" elapsed="1.000374"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:54.323735" elapsed="0.022677"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:54.347502" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:54.346412" elapsed="0.463389"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:54.322621" elapsed="0.487180"/>
+</kw>
+<kw name="E clico no botão de confirmar login" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:54.810810" elapsed="0.469907"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:55.280717" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:55.280717" elapsed="1.146214"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:54.809801" elapsed="1.617130"/>
+</kw>
+<kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:23:56.426931" elapsed="1.514447"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:58.414044" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:57.941378" elapsed="0.472666"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:56.426931" elapsed="1.987113"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:44.977262" elapsed="13.436782"/>
+</kw>
+<kw name="Quando eu clico no lixo eletronico" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LIXO_ELETRONICO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:23:58.415743" elapsed="0.049055"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:58.465796" level="INFO">Clicking element '//*[@id="folderPaneDroppableContainer"]/div/div[3]/div/div/div[2]/div'.</msg>
+<arg>${LIXO_ELETRONICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:23:58.465301" elapsed="0.213935"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:58.415242" elapsed="0.264996"/>
+</kw>
+<kw name="E seleciono um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:58.682342" level="INFO">Sending key(s) ('DOWN',) to page.</msg>
+<msg time="2024-03-19T13:23:58.682342" level="INFO">Pressing special key DOWN to browser.</msg>
+<msg time="2024-03-19T13:23:58.682342" level="INFO">Releasing special key DOWN.</msg>
+<arg>none</arg>
+<arg>DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:58.681810" elapsed="0.161028"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:58.843839" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:23:58.843839" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:23:58.843839" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:23:58.842838" elapsed="0.031126"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:23:58.681240" elapsed="0.192724"/>
+</kw>
+<kw name="E clicar no icone de excluir" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:23:58.874963" level="INFO">Clicking element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[2]/div/div/span/button[1]'.</msg>
+<msg time="2024-03-19T13:24:00.155045" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-19T13:24:00.156056" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-295" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-298"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</msg>
+<arg>${BOTAO APAGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-19T13:23:58.874963" elapsed="1.284157">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-295" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-298"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-03-19T13:23:58.874963" elapsed="1.284666">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-295" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-298"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:24:00.160657" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:24:00.162659" elapsed="2.246888"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:00.161662" elapsed="2.248809"/>
+</kw>
+<tag>Excluir</tag>
+<status status="FAIL" start="2024-03-19T13:23:44.976305" elapsed="17.435163">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-295" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-298"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</test>
+<test id="s1-t6" name="Apagar arquivo morto" line="56">
+<kw name="Dado que eu realize o login" owner="Keywords">
+<kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:02.422279" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T13:24:02.422279" elapsed="4.383389"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T13:24:06.806701" elapsed="0.118373"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:02.421149" elapsed="4.503925"/>
+</kw>
+<kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:06.926098" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<arg>${BOTAO INICIAR SESSAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:06.926098" elapsed="0.200815"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:06.925074" elapsed="0.201839"/>
+</kw>
+<kw name="E mudar para nova aba" owner="Keywords">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:07.126913" elapsed="0.014287"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:07.126913" elapsed="0.015079"/>
+</kw>
+<kw name="E preencher email" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:24:07.142493" elapsed="0.938323"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:08.081821" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<arg>${INPUT_LOGIN}</arg>
+<arg>gustav8Testes@outlook.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:08.080816" elapsed="0.211741"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:07.141992" elapsed="1.150565"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:24:08.292557" elapsed="0.013065"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:08.305622" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:08.305622" elapsed="0.063756"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:08.292557" elapsed="0.076821"/>
+</kw>
+<kw name="E preencher senha" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:24:08.370377" elapsed="0.468123"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:08.838500" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:24:08.906778" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>Teste123@</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:08.838500" elapsed="0.221168"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:08.369378" elapsed="0.690290"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T13:24:10.060710" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T13:24:09.059668" elapsed="1.001042"/>
+</kw>
+<kw name="E clico no botão avançar" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:24:10.061708" elapsed="0.013918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:10.076624" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<arg>${BOTAO AVANCAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:10.075626" elapsed="0.450559"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:10.060710" elapsed="0.466503"/>
+</kw>
+<kw name="E clico no botão de confirmar login" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:24:10.527213" elapsed="0.445068"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:10.972380" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<arg>${BOTAO CONFIRMAR LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:10.972380" elapsed="2.039416"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:10.527213" elapsed="2.484583"/>
+</kw>
+<kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-19T13:24:13.012870" elapsed="1.853312"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:15.108031" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<arg>${BOTAO_NOVO_EMAIL}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:24:14.866182" elapsed="0.241849"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:13.012870" elapsed="2.095161"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:02.421149" elapsed="12.686882"/>
+</kw>
+<kw name="Quando selecionar um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:15.109935" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:24:15.109935" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:24:15.109935" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:24:15.109935" elapsed="0.042617"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:15.109935" elapsed="0.042617"/>
+</kw>
+<kw name="E clicar no icone de arquivar" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:15.397050" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>${ICONE_ARQUIVAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:24:15.153553" elapsed="0.705371"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:15.859943" level="INFO">Clicking element 'id=505'.</msg>
+<arg>${ICONE_ARQUIVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:15.858924" elapsed="0.244297"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:15.153553" elapsed="0.950564"/>
+</kw>
+<kw name="E clicar em arquivo morto" owner="Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ARQUIVO_MORTO}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-03-19T13:24:16.105511" elapsed="0.503422"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:16.608933" level="INFO">Clicking element '//*[@id="folderPaneDroppableContainer"]/div/div[3]/div/div/div[6]/div'.</msg>
+<arg>${ARQUIVO_MORTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:16.608933" elapsed="1.003015"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:16.105511" elapsed="1.506437"/>
+</kw>
+<kw name="E selecionar um arquivo morto" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:17.614950" level="INFO">Sending key(s) ('DOWN',) to page.</msg>
+<msg time="2024-03-19T13:24:17.614950" level="INFO">Pressing special key DOWN to browser.</msg>
+<msg time="2024-03-19T13:24:17.614950" level="INFO">Releasing special key DOWN.</msg>
+<arg>none</arg>
+<arg>DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:24:17.614950" elapsed="0.295450"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:17.910400" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:24:17.910400" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:24:17.911403" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:24:17.910400" elapsed="0.179721"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:17.614950" elapsed="0.476172"/>
+</kw>
+<kw name="E clicar no icone de excluir" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:18.092015" level="INFO">Clicking element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[2]/div/div/span/button[1]'.</msg>
+<arg>${BOTAO APAGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:18.092015" elapsed="0.142999"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:18.092015" elapsed="0.144000"/>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NOTIFICACAO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:24:18.237213" elapsed="0.917535"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:19.188487" level="INFO">Element '//*[@id="Pular para lista de mensagens-region"]/div[3]/div/div' is displayed.</msg>
+<arg>${NOTIFICACAO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T13:24:19.154748" elapsed="0.034207"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:18.236806" elapsed="0.952149"/>
+</kw>
+<kw name="E desfazer apagado" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:24:19.190491" level="INFO">Clicking element '//*[@id="Pular para lista de mensagens-region"]/div[3]/div/div/div[2]/button[1]'.</msg>
+<arg>${DESFAZER APAGADO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:24:19.190491" elapsed="0.152593"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:19.189477" elapsed="0.153607"/>
+</kw>
+<kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-19T13:24:19.344114" elapsed="2.227015"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:24:19.344114" elapsed="2.228124"/>
+</kw>
+<tag>Excluir</tag>
+<status status="PASS" start="2024-03-19T13:24:02.421149" elapsed="19.153493"/>
+</test>
+<status status="FAIL" start="2024-03-19T13:22:33.709198" elapsed="107.870521"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="3" skip="0">Excluir</stat>
+</tag>
+<suite>
+<stat pass="3" fail="3" skip="0" id="s1" name="ExcluirEmail">ExcluirEmail</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-19T13:22:33.945350" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 6: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:22:33.947350" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 3: Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:22:33.950368" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Pesquisar.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:22:33.950368" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 4: Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Pesquisar.robot' on line 10: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:22:33.954388" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:22:33.956377" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 5: Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot' on line 9: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:22:33.961383" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ResponderEmail.robot' on line 8: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:22:33.962347" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 6: Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ResponderEmail.robot' on line 10: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:22:33.966348" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\MandarEmail.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:22:33.968348" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 7: Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\MandarEmail.robot' on line 9: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:22:33.971375" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 6: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:22:33.972414" level="ERROR">Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot' on line 5: Error in file 'C:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

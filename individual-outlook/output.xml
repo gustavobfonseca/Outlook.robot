@@ -1,218 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-15T11:06:50.115100" rpa="false" schemaversion="5">
-<suite id="s1" name="TesteOutlook" source="c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot">
-<test id="s1-t1" name="Pesquisar email" line="28">
-<kw name="Pesquisar email nos ítens excluidos" owner="Pesquisar">
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-19T13:25:27.196658" rpa="false" schemaversion="5">
+<suite id="s1" name="ExcluirEmail" source="c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot">
+<test id="s1-t1" name="Apagar email do Lixo Eletrônico" line="48">
 <kw name="Dado que eu realize o login" owner="Keywords">
-<kw name="Login" owner="Login">
 <kw name="Dado que eu acesse o site da outlook" owner="SetupTeardown">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:50.394011" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
+<msg time="2024-03-19T13:25:27.509550" level="INFO">Opening browser 'Chrome' to base url 'https://outlook.com'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-15T11:06:50.394011" elapsed="4.904422"/>
+<status status="PASS" start="2024-03-19T13:25:27.509550" elapsed="5.778305"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-15T11:06:55.298433" elapsed="0.161296"/>
+<status status="PASS" start="2024-03-19T13:25:33.288432" elapsed="0.140935"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:50.394011" elapsed="5.065718"/>
+<status status="PASS" start="2024-03-19T13:25:27.508550" elapsed="5.920817"/>
 </kw>
 <kw name="Quando eu clico no botão iniciar sessão" owner="Keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:55.459729" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
+<msg time="2024-03-19T13:25:33.431372" level="INFO">Clicking element '//*[@id="feature-oc387eee"]/div/div/div[1]/div/div[3]/div[1]/a'.</msg>
 <arg>${BOTAO INICIAR SESSAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:55.459729" elapsed="0.165114"/>
+<status status="PASS" start="2024-03-19T13:25:33.431372" elapsed="0.122324"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:55.459729" elapsed="0.165114"/>
+<status status="PASS" start="2024-03-19T13:25:33.430367" elapsed="0.124364"/>
 </kw>
 <kw name="E mudar para nova aba" owner="Keywords">
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:55.624843" elapsed="0.016000"/>
+<status status="PASS" start="2024-03-19T13:25:33.555724" elapsed="0.010452"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:55.624843" elapsed="0.016000"/>
+<status status="PASS" start="2024-03-19T13:25:33.554731" elapsed="0.011445"/>
 </kw>
 <kw name="E preencher email" owner="Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${INPUT_LOGIN}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-15T11:06:55.640843" elapsed="1.011750"/>
+<status status="PASS" start="2024-03-19T13:25:33.566176" elapsed="1.001681"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:56.652593" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
+<msg time="2024-03-19T13:25:34.570073" level="INFO">Typing text 'gustav8Testes@outlook.com' into text field 'id=i0116'.</msg>
 <arg>${INPUT_LOGIN}</arg>
 <arg>gustav8Testes@outlook.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:56.652593" elapsed="0.268772"/>
+<status status="PASS" start="2024-03-19T13:25:34.568856" elapsed="0.212637"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:55.640843" elapsed="1.280522"/>
+<status status="PASS" start="2024-03-19T13:25:33.566176" elapsed="1.216322"/>
 </kw>
 <kw name="E clico no botão avançar" owner="Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${BOTAO AVANCAR}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-15T11:06:56.921365" elapsed="0.007904"/>
+<status status="PASS" start="2024-03-19T13:25:34.782498" elapsed="0.009874"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:56.929269" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<msg time="2024-03-19T13:25:34.793390" level="INFO">Clicking element 'id=idSIButton9'.</msg>
 <arg>${BOTAO AVANCAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:56.929269" elapsed="0.081702"/>
+<status status="PASS" start="2024-03-19T13:25:34.792372" elapsed="0.039126"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:56.921365" elapsed="0.089673"/>
+<status status="PASS" start="2024-03-19T13:25:34.782498" elapsed="0.050024"/>
 </kw>
 <kw name="E preencher senha" owner="Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${INPUT_SENHA}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-15T11:06:57.011038" elapsed="0.507178"/>
+<status status="PASS" start="2024-03-19T13:25:34.832522" elapsed="0.526728"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:57.519224" level="INFO">Typing password into text field 'id=i0118'.</msg>
-<msg time="2024-03-15T11:06:57.591346" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-03-19T13:25:35.360248" level="INFO">Typing password into text field 'id=i0118'.</msg>
+<msg time="2024-03-19T13:25:35.440959" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${INPUT_SENHA}</arg>
 <arg>Teste123@</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:57.519224" elapsed="0.136010"/>
+<status status="PASS" start="2024-03-19T13:25:35.360248" elapsed="0.261369"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:57.011038" elapsed="0.644196"/>
+<status status="PASS" start="2024-03-19T13:25:34.832522" elapsed="0.789095"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-15T11:06:58.657371" level="INFO">Slept 1 second.</msg>
+<msg time="2024-03-19T13:25:36.624797" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-15T11:06:57.655234" elapsed="1.002137"/>
+<status status="PASS" start="2024-03-19T13:25:35.622722" elapsed="1.002075"/>
 </kw>
 <kw name="E clico no botão avançar" owner="Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${BOTAO AVANCAR}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-15T11:06:58.657371" elapsed="0.017700"/>
+<status status="PASS" start="2024-03-19T13:25:36.626682" elapsed="0.020001"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:58.675071" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<msg time="2024-03-19T13:25:36.647693" level="INFO">Clicking element 'id=idSIButton9'.</msg>
 <arg>${BOTAO AVANCAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:58.675071" elapsed="0.642091"/>
+<status status="PASS" start="2024-03-19T13:25:36.646683" elapsed="0.463752"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:58.657371" elapsed="0.659791"/>
+<status status="PASS" start="2024-03-19T13:25:36.625684" elapsed="0.485250"/>
 </kw>
 <kw name="E clico no botão de confirmar login" owner="Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${BOTAO CONFIRMAR LOGIN}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-15T11:06:59.317162" elapsed="0.485217"/>
+<status status="PASS" start="2024-03-19T13:25:37.111438" elapsed="0.469181"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:06:59.802379" level="INFO">Clicking element 'id=acceptButton'.</msg>
+<msg time="2024-03-19T13:25:37.581620" level="INFO">Clicking element 'id=acceptButton'.</msg>
 <arg>${BOTAO CONFIRMAR LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:06:59.802379" elapsed="1.336846"/>
+<status status="PASS" start="2024-03-19T13:25:37.581620" elapsed="1.294736"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:59.317162" elapsed="1.822063"/>
+<status status="PASS" start="2024-03-19T13:25:37.111438" elapsed="1.764918"/>
 </kw>
 <kw name="Então deve aparecer o botão &quot;novo email&quot; como evidencia de que o login foi feito" owner="Keywords">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${BOTAO_NOVO_EMAIL}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-15T11:07:01.139225" elapsed="1.860981"/>
+<status status="PASS" start="2024-03-19T13:25:38.876836" elapsed="1.868610"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:07:03.168210" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
+<msg time="2024-03-19T13:25:40.845220" level="INFO">Element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[1]/div/div/span/button[1]' is displayed.</msg>
 <arg>${BOTAO_NOVO_EMAIL}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-15T11:07:03.000206" elapsed="0.168004"/>
+<status status="PASS" start="2024-03-19T13:25:40.746448" elapsed="0.098772"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:07:01.139225" elapsed="2.028985"/>
+<status status="PASS" start="2024-03-19T13:25:38.876836" elapsed="1.968384"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:50.386050" elapsed="12.782160"/>
+<status status="PASS" start="2024-03-19T13:25:27.508550" elapsed="13.336670"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:50.386050" elapsed="12.782160"/>
-</kw>
-<kw name="Quando eu clicar na barra de pesquisa" owner="Keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:07:03.176208" level="INFO">Clicking element 'id=topSearchInput'.</msg>
-<arg>${PESQUISA}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:07:03.176208" elapsed="0.132036"/>
-</kw>
-<status status="PASS" start="2024-03-15T11:07:03.168210" elapsed="0.140034"/>
-</kw>
-<kw name="E preencho com o que quero pesquisar" owner="Keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:07:03.308244" level="INFO">Typing text 'Gustavo Pardinho' into text field 'id=topSearchInput'.</msg>
-<arg>${PESQUISA}</arg>
-<arg>Gustavo Pardinho</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:07:03.308244" elapsed="0.303635"/>
-</kw>
-<status status="PASS" start="2024-03-15T11:07:03.308244" elapsed="0.303635"/>
-</kw>
-<kw name="E seleciono &quot;Itens Excluidos&quot;" owner="Keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:07:03.611879" level="INFO">Clicking element '//*[@id="searchScopeButtonId"]/span[2]'.</msg>
-<arg>${ABRIR_OPCOES_PESQUISA}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:07:03.611879" elapsed="0.079978"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:07:03.691857" level="INFO">Clicking element '//*[@id="searchScopeButtonId-list4"]/span'.</msg>
-<arg>${OPCAO_ITENS_EXCLUIDOS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-15T11:07:03.691857" elapsed="0.236031"/>
-</kw>
-<status status="PASS" start="2024-03-15T11:07:03.611879" elapsed="0.316009"/>
-</kw>
-<kw name="Então o sistema deverá exibir os resultados relevantes que correspondam à palavra-chave" owner="Keywords">
+<kw name="Quando eu clico no lixo eletronico" owner="Keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${PRINCIPAIS RESULTADOS}</arg>
+<arg>${LIXO_ELETRONICO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-15T11:07:03.927888" elapsed="0.417524"/>
+<status status="PASS" start="2024-03-19T13:25:40.847285" elapsed="0.058445"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-03-15T11:07:04.369412" level="INFO">Element '//*[@id="MailList"]' is displayed.</msg>
-<arg>${PRINCIPAIS RESULTADOS}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-15T11:07:04.345412" elapsed="0.024000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:25:40.907228" level="INFO">Clicking element '//*[@id="folderPaneDroppableContainer"]/div/div[3]/div/div/div[2]/div'.</msg>
+<arg>${LIXO_ELETRONICO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T13:25:40.906229" elapsed="0.194808"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:07:03.927888" elapsed="0.441524"/>
+<status status="PASS" start="2024-03-19T13:25:40.846216" elapsed="0.255326"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:50.386050" elapsed="13.983362"/>
+<kw name="E seleciono um email" owner="Keywords">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:25:41.103578" level="INFO">Sending key(s) ('DOWN',) to page.</msg>
+<msg time="2024-03-19T13:25:41.103578" level="INFO">Pressing special key DOWN to browser.</msg>
+<msg time="2024-03-19T13:25:41.104619" level="INFO">Releasing special key DOWN.</msg>
+<arg>none</arg>
+<arg>DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:25:41.103578" elapsed="0.111302"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:25:41.216895" level="INFO">Sending key(s) ('UP',) to page.</msg>
+<msg time="2024-03-19T13:25:41.216895" level="INFO">Pressing special key UP to browser.</msg>
+<msg time="2024-03-19T13:25:41.216895" level="INFO">Releasing special key UP.</msg>
+<arg>none</arg>
+<arg>UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-19T13:25:41.215884" elapsed="0.041099"/>
+</kw>
+<status status="PASS" start="2024-03-19T13:25:41.102839" elapsed="0.154144"/>
+</kw>
+<kw name="E clicar no icone de excluir" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T13:25:41.259507" level="INFO">Clicking element '//*[@id="innerRibbonContainer"]/div[1]/div/div/div/div[2]/div/div/span/button[1]'.</msg>
+<msg time="2024-03-19T13:25:42.580678" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-19T13:25:42.580678" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-285" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-289"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</msg>
+<arg>${BOTAO APAGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-19T13:25:41.258912" elapsed="1.332982">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-285" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-289"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-03-19T13:25:41.258646" elapsed="1.334246">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-285" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-289"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
+</kw>
+<kw name="Entao deve aparecer uma notificação que o email foi apagado" owner="Keywords">
+<status status="NOT RUN" start="2024-03-19T13:25:42.593893" elapsed="0.000000"/>
 </kw>
 <kw name="Fechar Navegador" owner="SetupTeardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-15T11:07:04.369412" elapsed="2.252217"/>
+<status status="PASS" start="2024-03-19T13:25:42.595674" elapsed="2.255445"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:07:04.369412" elapsed="2.252217"/>
+<status status="PASS" start="2024-03-19T13:25:42.594655" elapsed="2.257384"/>
 </kw>
-<status status="PASS" start="2024-03-15T11:06:50.386050" elapsed="16.235579"/>
+<tag>Excluir</tag>
+<status status="FAIL" start="2024-03-19T13:25:27.507582" elapsed="17.345469">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" data-automation-type="RibbonSplitButton" data-unique-id="Ribbon-519" class="splitPrimaryButton root-285" aria-label="Excluir" aria-disabled="true" data-is-focusable="false" tabindex="-1"&gt;...&lt;/button&gt; is not clickable at point (232, 104). Other element would receive the click: &lt;div class="wrapperElement-289"&gt;...&lt;/div&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7926BAD02+56930]
+	(No symbol) [0x00007FF79262F602]
+	(No symbol) [0x00007FF7924E42E5]
+	(No symbol) [0x00007FF792530A80]
+	(No symbol) [0x00007FF79252E8AB]
+	(No symbol) [0x00007FF79252C0B4]
+	(No symbol) [0x00007FF79252AE45]
+	(No symbol) [0x00007FF79251F798]
+	(No symbol) [0x00007FF79254BC9A]
+	(No symbol) [0x00007FF79251F09A]
+	(No symbol) [0x00007FF79254BEB0]
+	(No symbol) [0x00007FF7925681E2]
+	(No symbol) [0x00007FF79254BA43]
+	(No symbol) [0x00007FF79251D438]
+	(No symbol) [0x00007FF79251E4D1]
+	GetHandleVerifier [0x00007FF792A36F8D+3711213]
+	GetHandleVerifier [0x00007FF792A904CD+4077101]
+	GetHandleVerifier [0x00007FF792A8865F+4044735]
+	GetHandleVerifier [0x00007FF792759736+706710]
+	(No symbol) [0x00007FF79263B8DF]
+	(No symbol) [0x00007FF792636AC4]
+	(No symbol) [0x00007FF792636C1C]
+	(No symbol) [0x00007FF7926268D4]
+	BaseThreadInitThunk [0x00007FF851737344+20]
+	RtlUserThreadStart [0x00007FF8521026B1+33]
+</status>
 </test>
-<status status="PASS" start="2024-03-15T11:06:50.123112" elapsed="16.498517"/>
+<status status="FAIL" start="2024-03-19T13:25:27.203658" elapsed="17.662377"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">Excluir</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TesteOutlook">TesteOutlook</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="ExcluirEmail">ExcluirEmail</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-03-15T11:06:50.346092" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 9: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg time="2024-03-15T11:06:50.346092" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\PageObjects\Keywords.robot' on line 3: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
-<msg time="2024-03-15T11:06:50.354007" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\PageObjects\Login.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg time="2024-03-15T11:06:50.362024" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 9: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg time="2024-03-15T11:06:50.362024" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\PageObjects\Login.robot' on line 5: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
-<msg time="2024-03-15T11:06:50.370035" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 9: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg time="2024-03-15T11:06:50.370035" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\PageObjects\MandarEmail.robot' on line 5: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
-<msg time="2024-03-15T11:06:50.378024" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 9: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg time="2024-03-15T11:06:50.378024" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\PageObjects\Pesquisar.robot' on line 5: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook.robot\individual-outlook\TestesCase\TesteOutlook.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:25:27.464365" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 6: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:25:27.467346" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 3: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:25:27.472293" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Pesquisar.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:25:27.474292" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 4: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Pesquisar.robot' on line 10: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:25:27.478293" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:25:27.480290" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 5: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot' on line 9: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:25:27.487543" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ResponderEmail.robot' on line 8: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:25:27.490112" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 6: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ResponderEmail.robot' on line 10: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:25:27.493773" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\MandarEmail.robot' on line 7: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:25:27.495534" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\PageObjects\Keywords.robot' on line 7: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\MandarEmail.robot' on line 9: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-03-19T13:25:27.501629" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 6: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2024-03-19T13:25:27.502548" level="ERROR">Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\ExcluirEmail.robot' on line 5: Error in file 'c:\Users\LowCost\Desktop\Outloook robot\Outlook robot\individual-outlook\TestesCase\Login.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>

@@ -1,6 +1,10 @@
 *** Settings ***
 Resource    ../Resources/Locators.robot
-Resource    ../TestesCase/TesteOutlook.robot
+Resource    ../TestesCase/Login.robot
+Resource    ../TestesCase/Pesquisar.robot
+Resource    ../TestesCase/ExcluirEmail.robot
+Resource    ../TestesCase/ResponderEmail.robot
+Resource    ../TestesCase/MandarEmail.robot
 
 *** Keywords ***    #REALIZAR LOGIN
 Quando eu clico no botão iniciar sessão
@@ -27,7 +31,18 @@ Então deve aparecer o botão "novo email" como evidencia de que o login foi fei
     Element Should Be Visible    ${BOTAO_NOVO_EMAIL}
 
 Dado que eu realize o login
-    Login
+    Dado que eu acesse o site da outlook
+    Quando eu clico no botão iniciar sessão
+    E mudar para nova aba
+    E preencher email
+    E clico no botão avançar
+    E preencher senha
+    Sleep    1s    #para garantir que vai carregar a página
+    E clico no botão avançar
+    E clico no botão de confirmar login
+    Então deve aparecer o botão "novo email" como evidencia de que o login foi feito
+
+
 *** Keywords ***    #LOGIN SENHA ERRADA
 E preencher senha incorreta
     Wait Until Page Contains Element    ${INPUT_SENHA}
@@ -139,33 +154,32 @@ E seleciono "Na caixa de entrada"
     Click Element    ${ABRIR_OPCOES_PESQUISA}
     Click Element    ${OPCAO_CAIXA_DE_ENTRADA}
 
-*** Keywords ***
+*** Keywords ***    #REALIZAR PESQUISA EM RASCUNHOS
 E seleciono "Rascunhos"
     Click Element    ${ABRIR_OPCOES_PESQUISA}
     Click Element    ${OPCAO_RASCUNHOS}
 
-*** Keywords ***
+*** Keywords ***    #REALIZAR PESQUISA EM INTENS ENVIADOS
 E seleciono "Itens Enviados"
     Click Element    ${ABRIR_OPCOES_PESQUISA}
     Click Element    ${OPCAO_ITENS_ENVIADOS}
 
-*** Keywords ***
+*** Keywords ***    #REALIZAR PESQUISA EM ITENS EXCLUÍDOS
 E seleciono "Itens Excluidos"
     Click Element    ${ABRIR_OPCOES_PESQUISA}
     Click Element    ${OPCAO_ITENS_EXCLUIDOS}
 
-*** Keywords ***
+*** Keywords ***    #REALIZAR PESQUISA EM LIXOS ELETRÔNICOS
 E seleciono "Lixo Eletrônico"
     Click Element    ${ABRIR_OPCOES_PESQUISA}
     Click Element    ${OPCAO_LIXO_ELETRONICO}
 
 
-*** Keywords ***    #RESPONDER EMAIL
+*** Keywords ***    #RESPONDER EMAIL NA CAIXA DE ENTRADA
  Quando abrir um email na caixa de entrada
-     Scroll Element Into View    ${DIV EMAIL}
-     Click Element    ${DIV EMAIL}
-
-E clicar no botão "Responder"
+    Press Keys    none       DOWN
+    Press Keys    none       UP        
+E pressionar a tecla R
     Press Keys       none       R
     # Click Element    ${BOTAO RESPONDER EMAIL}
 
@@ -181,17 +195,67 @@ E clicar no botão "Enviar"
 Então deve sumir o botão de enviar resposta como evidencia que a resposta foi enviada
     Element Should Not Be Visible   ${CORPO RESPOSTA}
 
+*** Keywords ***
+E clicar no botao de Responder
+    Press Keys    none    R
+    # Wait Until Element Is Visible    ${BOTAO RESPONDER EMAIL}
+    # Scroll Element Into View    ${BOTAO RESPONDER EMAIL}
+    # Click Element    ${BOTAO RESPONDER EMAIL}
 
-*** Keywords ***    #APAGAR EMAILS
+*** Keywords ***
+E clicar em opções do botão enviar
+    Scroll Element Into View    ${OPCOES_ENVIAR}
+    Click Element    ${OPCOES_ENVIAR}
+
+E selecionar "Agendar enviar email"
+    Wait Until Element Is Visible    ${BOTAO_AGENDAR_ENVIAR_EMAIL}
+    Click Element    ${BOTAO_AGENDAR_ENVIAR_EMAIL}
+
+E selecionar a opção 1 de agendar envio
+    Wait Until Element Is Visible    ${AGENDAR_ENVIO_1}
+    Click Element    ${AGENDAR_ENVIO_1}
+
+E clicar em enviar agendamento
+    Press Keys     none    TAB
+    Press Keys     none    TAB
+    Press Keys     none    ENTER
+    # Wait Until Element Is Visible    ${BOTÃO_ENVIAR_AGENDAMENTO}
+    # Click Element    ${BOTÃO_ENVIAR_AGENDAMENTO}
+
+Então deve sumir o botão de enviar agendamento mostrando que foi enviado com sucesso
+    Wait Until Element Is Not Visible    ${BOTÃO_ENVIAR_AGENDAMENTO}
+*** Keywords ***
+E selecionar a opção 2 de agendar envio
+    Wait Until Element Is Visible    ${AGENDAR_ENVIO_2}
+    Click Element    ${AGENDAR_ENVIO_2}
+*** Keywords ***
+E clicar na opção de enviar   
+    Click Element    ${BOTÃO_ENVIAR}
+Então deve sumir a opção de enviar, mostrando que foi enviado com sucesso
+    Wait Until Element Is Not Visible    ${BOTÃO_ENVIAR}
+*** Keywords ***
+E clicar no ícone de uma nova janela
+    Wait Until Element Is Visible    ${ICONE_NOVA_ABA}
+    Click Element    ${ICONE_NOVA_ABA}
+E redigir a resposta no campo de texto da nova janela
+        # Wait Until Element Is Visible    ${DIV_NOVA_ABA}
+        # Click Element    ${DIV_NOVA_ABA}
+        Wait Until Element Is Visible    ${INPUT_TEXTO_NOVA_ABA}
+        Input Text    ${INPUT_TEXTO_NOVA_ABA}    Resposta pela nova aba :P
+    
+E clicar no botão "Enviar" da nova janela
+    Press Keys    none    Crtrl+Enter
 
 
+Então deve sumir a nova janela como evidencia que a resposta foi enviada
+    Wait Until Element Is Not Visible    ${INPUT_TEXTO_NOVA_ABA}
+
+*** Keywords ***    #APAGAR EMAIL NA CAIXA DE ENTRADA
 Quando selecionar um email
-    Press Keys    none       DOWN
     Press Keys    none       UP
    
-E pressionar a tecla "Delete" ou clicar no icone de excluir
+E clicar no icone de excluir
     Click Element    ${BOTAO APAGAR}
-    # Press Keys    none    Delete
 
 Entao deve aparecer uma notificação que o email foi apagado
     Wait Until Element Is Visible    ${NOTIFICACAO}
@@ -199,6 +263,45 @@ Entao deve aparecer uma notificação que o email foi apagado
 
 E desfazer apagado
     Click Element    ${DESFAZER APAGADO}
+
+*** Keywords ***    #APAGAR EMAIL NA CAIXA DE ENTRADA COM TECLA DELETE
+E pressiono a tecla "Delete"
+    Press Keys    none    DELETE
+
+*** Keywords ***    #APAGAR EMAIL DA CAIXA DE ENTRADA POR "MAIS OPÇÕES"
+E clico em "Mais ações"
+    Wait Until Element Is Visible    ${MAIS_ACOES}
+    Click Element    ${MAIS_ACOES}
+
+E clico em "Excluir"
+    Click Element    ${MAIS_ACOES_EXCLUIR}
+
+*** Keywords ***    #APAGAR EMAIL DOS RASCUNHOS
+Quando eu clico nos rascunhos
+    Wait Until Element Is Visible    ${RASCUNHO}
+    Click Element    ${RASCUNHO}
+
+E seleciono um email 
+        Press Keys    none       DOWN
+        Press Keys    none       UP
+
+*** Keywords ***    #Apagar email do Lixo Eletrônico
+Quando eu clico no lixo eletronico
+    Wait Until Element Is Visible    ${LIXO_ELETRONICO}
+    Click Element    ${LIXO_ELETRONICO}
+    
+
+*** Keywords ***    #APAGAR EMAIL DE ARQUIVO MORTO
+E clicar no icone de arquivar
+    Wait Until Element Is Visible    ${ICONE_ARQUIVAR}
+    Click Element    ${ICONE_ARQUIVAR}
+E clicar em arquivo morto
+    Scroll Element Into View    ${ARQUIVO_MORTO}
+    Click Element    ${ARQUIVO_MORTO}
+E selecionar um arquivo morto
+    Press Keys    none       DOWN
+    Press Keys    none       UP
+
 
 
 
